@@ -12,8 +12,9 @@ services:
             name: piazza-db
             property: connectionString
         - key: RAILS_MASTER_KEY
-sync: false
-  databases:
-    - name: piazza-db
-      plan: free
-      postgresMajorVersion: 14
+          sync: false
+
+databases:
+  - name: piazza-db
+    plan: free
+    postgresMajorVersion: 14
