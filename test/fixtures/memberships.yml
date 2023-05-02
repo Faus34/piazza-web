@@ -1,9 +1,12 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-one:
-  user: one
-  organization: one
-
-two:
-  user: two
-  organization: two
+jerry:
+  user: jerry
+  organization: jerry
+kramer:
+  user: kramer
+  organization: kramer
+elaine:
+  user: elaine
+  organization: elaine
+george:
+  user: george
+  organization: george
