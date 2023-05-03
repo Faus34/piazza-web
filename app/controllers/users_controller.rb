@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(user_params)s
+    @user = User.new(user_params)
     if @user.save
       @organization = Organization.create(members: [@user])
       @app_session = @user.app_sessions.create
