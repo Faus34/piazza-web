@@ -16,4 +16,5 @@ end
 
 class ActionDispatch::IntegrationTest
   include RoutesHelpers
+  include AuthenticationHelpers
 end

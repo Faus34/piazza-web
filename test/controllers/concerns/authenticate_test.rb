@@ -54,10 +54,4 @@ class AuthenticateTest < ActionDispatch::IntegrationTest
     assert_response :ok
     assert_equal "User: #{@user.id}", response.body
   end
-
-  private
-
-  def log_in(user, password: 'password')
-    post login_path, params: { user: { email: user.email, password: password } }
-  end
 end
