@@ -2,7 +2,9 @@ require 'test_helper'
 
 class AuthenticateTestsController < TestController
   include Authenticate
-  skip_authentication only: [:new, :create]
+  helper_method :turbo_native_app?
+
+  skip_authentication only: %i[new create]
   allow_unauthenticated only: :show
   def show
     render plain: "User: #{Current.user&.id&.to_s}"
@@ -13,7 +15,7 @@ class AuthenticateTest < ActionDispatch::IntegrationTest
   setup do
     @user = users(:jerry)
     draw_test_routes do
-      resource :authenticate_test, only: [:new, :create, :show, :edit]
+      resource :authenticate_test, only: %i[new create show edit]
     end
   end
 
